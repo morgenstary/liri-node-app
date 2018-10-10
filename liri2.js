@@ -2,7 +2,7 @@ require("dotenv").config();
 
 var request = require("request");
 var moment = require('moment');
-var command = process.argv[2];
+var Command = process.argv[2];
 var commandParam = process.argv[3];
 
 // code not working yet
@@ -42,36 +42,37 @@ function processCommands(command, commandParam) {
         default:
             console.log("Invalid command. Please type any of the following commnds: concert-this spotify-this-song movie-this or do-what-it-says");
     }
+}
 
 
 
-    function concertThis() {
+function concertThis() {
 
-        var queryUrl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=04986f7c93838994a17f468de0ad9a86";
+    var queryUrl = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=04986f7c93838994a17f468de0ad9a86";
 
-        console.log(queryUrl);
+    console.log(queryUrl);
 
-        request(queryUrl, function (error, response) {
+    request(queryUrl, function (error, response) {
 
-            if (!error && response.statusCode === 200) {
+        if (!error && response.statusCode === 200) {
 
-                var data = JSON.parse(response.body);
+            var data = JSON.parse(response.body);
 
-                for (var i = 0; i < data.length; i++) {
+            for (var i = 0; i < data.length; i++) {
 
-                    console.log(" \n" + data[i].venue.name);
-                    console.log(data[i].venue.city);
+                console.log(" \n" + data[i].venue.name);
+                console.log(data[i].venue.city);
 
-                    var date = data[i].datetime;
-                    var format = 'L';
-                    var result = moment(date).format(format);
+                var date = data[i].datetime;
+                var format = 'L';
+                var result = moment(date).format(format);
 
-                    console.log(result);
-                }
-
+                console.log(result);
             }
-        });
-    }
+
+        }
+    });
+}
 
 
 
