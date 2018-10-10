@@ -5,12 +5,12 @@ var moment = require('moment');
 var command = process.argv[2];
 var commandParam = process.argv[3];
 
-
+// code not working yet
 
 
 // Make it so liri.js can take in one of the following commands:
 
-//    * `concert-this not set up yet, to test code just run 'node liri.js <artist>' i.e. node liri.js drake
+//    * `concert-this 
 
 // var artist = process.argv[2];
 
