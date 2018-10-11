@@ -142,7 +142,11 @@ function doWhatItSays() {
 }
 
 // function writeLog() {
-//     fs.appendFile("log.txt", , function(err) {
+
+        // Can I put the funcitons from above into the parameters of fx.appendFile and then call them below, for example call them on line 161? 
+        // If so, how does one get the output of the contents a function?
+
+//     fs.appendFile("log.txt", FUNCTIONS (concert-this, spotifyThis, etc..), function(err) {
 
         
 
