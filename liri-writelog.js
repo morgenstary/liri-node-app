@@ -57,6 +57,7 @@ function concertThis() {
             
         }
     });
+    writeLog();
 }
 
 //    * `spotify-this-song`
@@ -141,7 +142,26 @@ function doWhatItSays() {
     });
 }
 
+function writeLog() {
+
+        // Can I put the funcitons from above into the parameters of fx.appendFile and then call them below, for example call them on line 163? 
+        // If so, how does one get the output of the contents a function?
+
+    fs.appendFile("log.txt", concertThis, function(err) {
+
+        
+
+        if (err) {
+          return console.log(err);
+        }
+        console.log("log.txt was updated!");
+      
+      });
+    
+}
+
 processCommands();
+concertThis();
 
 
 
