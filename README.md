@@ -1,8 +1,8 @@
 # liri-node-app
 
 To Use: Download and create your own .env file with 
-SPOTIFY_ID=<userID>
-SPOTIFY_SECRET=<userSecret>
+SPOTIFY_ID="userID"
+SPOTIFY_SECRET="userSecret"
 
 Use Commands: 'concert-this', 'spotify-this-song', 'movie-this', and 'do-what-it-says'.
 concert-this: Will give latest tour dates from the bandsintown API.
